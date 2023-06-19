@@ -12,7 +12,7 @@ imageurl = "href" # for example href or src
 
 imageurls = []
 soup = BeautifulSoup(requests.get(weburl).content, 'html.parser')
-gallery_links = soup.find_all("a", class_=webclass)
+gallery_links = soup.find_all("a", class_=imageclass)
 for link in gallery_links:
     href = link.get(imageurl)
     if href:
